@@ -10,16 +10,13 @@ const { blok } = Astro.props;
     <h2 class="text-[4vw]">PROJECT</h2>
     <p class="border border-black py-1 px-2 rounded-full">team, learning, achievement</p>
   </div>
-  <div class="flex items-center">
+  <div class="">
     <div class="w-3/5 border-r border-black pr-6">
       {
         blok.container?.map((blok, i) => {
           return <StoryblokComponent blok={blok} counter={i} />;
         })
       }
-    </div>
-    <div class="w-2/5">
-      <img src="../../assets/images/experience.png" alt="" />
     </div>
   </div>
 </section>
