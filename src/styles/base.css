@@ -1,0 +1,29 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ctaprimary {
+    @apply block w-fit border border-black px-8 py-3  hover:bg-stone-50 transition-colors;
+  }
+
+  .tag {
+    @apply px-2 rounded-full bg-black text-white;
+  }
+}
+
+@font-face {
+  font-family: "Jazmin";
+  src: url(/assets/fonts/jazmin/Jazmin-ExtraLight.otf) format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Jazmin";
+  src: url(/assets/fonts/jazmin/Jazmin-Regular.otf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Jazmin";
+  src: url(/assets/fonts/jazmin/Jazmin-Medium.otf) format("opentype");
+  font-weight: 500;
+}

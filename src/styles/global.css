@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* CUSTOM TAILWIND PREFLIGHT */
+
+:root {
+  --cursorSize: 40px;
+}
+
+body {
+  font-family: Poppins;
+  font-size: 17px;
+  height: 500vh;
+  background: #fbfbfa;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 195, 195);
+}

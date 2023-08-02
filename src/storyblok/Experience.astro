@@ -1,0 +1,25 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const { blok } = Astro.props;
+---
+
+<section {...storyblokEditable(blok)} class="">
+  <div class="flex border-b border-black justify-between items-center w-[96%] mx-auto">
+    <h2 class="text-[4vw] ">EXPERIENCE</h2>
+    <p class="border border-black py-1 px-2 rounded-full">work, task, achievement</p>
+  </div>
+  <div class="flex items-center ">
+    <div class="w-3/5 border-r border-black pr-6">
+      {
+        blok.container?.map((blok, i) => {
+          return <StoryblokComponent blok={blok} counter={i} />;
+        })
+      }
+    </div>
+    <div class="w-2/5">
+      <img src="../../assets/images/experience.png" alt="" />
+    </div>
+  </div>
+</section>

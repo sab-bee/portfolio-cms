@@ -1,0 +1,12 @@
+---
+import Main from "./Main.astro";
+import "../styles/base.css";
+import Navbar from "../components/Navbar.astro";
+
+const { title } = Astro.props;
+---
+
+<Main {title}>
+  <Navbar />
+  <div class=""><slot /></div>
+</Main>

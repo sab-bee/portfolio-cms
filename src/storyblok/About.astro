@@ -1,0 +1,21 @@
+---
+import { renderRichText, storyblokEditable } from "@storyblok/astro";
+const { blok } = Astro.props;
+---
+
+<section {...storyblokEditable(blok)} class="border-b border-black w-[96%] mx-auto">
+  <div class="flex border-b border-black justify-between items-center">
+    <h2 class="text-[4vw]">ABOUT ME</h2>
+    <p class="border border-black py-1 px-2 rounded-full">education, career, hobby</p>
+  </div>
+  <div class="my-8 flex items-center">
+    <div class="w-2/5">
+      <img src="../../assets/images/about.png" alt="" />
+    </div>
+    <div class="w-3/5 space-y-3">
+      <p>{blok.para1}</p>
+      <p>{blok.para2}</p>
+      <p>{blok.para3}</p>
+    </div>
+  </div>
+</section>
