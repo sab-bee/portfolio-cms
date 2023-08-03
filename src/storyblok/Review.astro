@@ -5,13 +5,12 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 const { blok } = Astro.props;
 ---
 
-<section {...storyblokEditable(blok)} class="border-t border-black w-[96%] mx-auto">
+<section {...storyblokEditable(blok)} class="w-[96%] mx-auto border-t border-black">
   <div class="flex border-b border-black justify-between items-center">
-    <h2 class="text-[4vw] font-normal m-0">PROJECT</h2>
-    <p class="border border-black py-1 px-2 rounded-full">projects that helped me develop</p>
+    <h2 class="text-[4vw] font-normal m-0">TESTIMONIAL</h2>
+    <p class="border border-black py-1 px-2 rounded-full">amazing people I have worked with</p>
   </div>
-
-  <div class="grid grid-cols-3">
+  <div class="">
     {
       blok.container?.map((blok, i) => {
         return <StoryblokComponent blok={blok} counter={i} />;

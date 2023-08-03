@@ -1,0 +1,14 @@
+---
+import { renderRichText, storyblokEditable } from "@storyblok/astro";
+
+const { blok } = Astro.props;
+console.log(blok);
+---
+
+<div {...storyblokEditable(blok)} class="w-[500px]">
+  <div class="[&>*]:m-0 [&>*]:text-base [&>*]:font-normal border border-black p-8 my-6">
+    <p>{blok.testimoni}</p>
+    <h2>{blok.reviewer}</h2>
+    <h2>{blok.title}</h2>
+  </div>
+</div>

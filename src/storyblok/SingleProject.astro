@@ -7,7 +7,7 @@ const renderPost = renderRichText(blok.post);
 
 <div
   {...storyblokEditable(blok)}
-  class="project mt-10 grid justify-center cursor-pointer hover:bg-shade p-6 rounded-xl transition-colors"
+  class="project grid justify-center items-center cursor-pointer hover:bg-shade p-6 transition-colors select-none"
 >
   <img
     class="h-[200px] w-[300px] object-cover rounded-xl mx-auto"
@@ -55,7 +55,7 @@ const renderPost = renderRichText(blok.post);
     border: 1px solid black;
     border-radius: 15px;
     padding: 5rem 2rem 2rem 2rem;
-    animation: animateModal 0.35s ease-out;
+    animation: animateModal 0.3s ease-out;
     transform-origin: 0% 0%;
   }
 
@@ -103,6 +103,14 @@ const renderPost = renderRichText(blok.post);
     background-color: rgb(199, 180, 164);
     border-radius: 100px;
   }
+
+  .borderX {
+    border-inline: 1px solid black;
+  }
+
+  .borderBot {
+    border-bottom: 1px solid black;
+  }
 </style>
 
 <script>
@@ -124,4 +132,12 @@ const renderPost = renderRichText(blok.post);
       });
     });
   });
+
+  for (let i = 1; i < projects.length; i += 3) {
+    projects[i].classList.add("borderX");
+  }
+
+  for (let i = 0; i <= projects.length-3; i++) {
+    projects[i].classList.add("borderBot");
+  }
 </script>

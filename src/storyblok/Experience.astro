@@ -8,9 +8,11 @@ const { blok } = Astro.props;
 <section {...storyblokEditable(blok)} class="">
   <div class="flex border-b border-black justify-between items-center w-[96%] mx-auto">
     <h2 class="font-normal text-[4vw] m-0">EXPERIENCE</h2>
-    <p class="border border-black py-1 px-2 rounded-full m-0">work, task, achievement</p>
+    <p class="border border-black py-1 px-2 rounded-full m-0">
+      my work experiences and achievements
+    </p>
   </div>
-  <div class="flex items-center ">
+  <div class="flex items-center">
     <div class="w-3/5 border-r border-black pr-6">
       {
         blok.container?.map((blok, i) => {
