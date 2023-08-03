@@ -1,20 +1,127 @@
 ---
-import { storyblokEditable } from "@storyblok/astro";
+import { renderRichText, storyblokEditable } from "@storyblok/astro";
 
 const { blok } = Astro.props;
+const renderPost = renderRichText(blok.post);
 ---
 
-<div {...storyblokEditable(blok)} class="border-b border-black">
-  <div
-    class="tab select-none py-9 flex gap-x-8 justify-between items-center cursor-pointer hover:bg-neutral-100 px-8"
-  >
-    <div>
-      <h2 class="text-2xl">{blok.name}</h2>
+<div
+  {...storyblokEditable(blok)}
+  class="project mt-10 grid justify-center cursor-pointer hover:bg-shade p-6 rounded-xl transition-colors"
+>
+  <img
+    class="h-[200px] w-[300px] object-cover rounded-xl mx-auto"
+    src={blok?.banner?.filename}
+    alt=""
+  />
+  <p class="font-medium">{blok.name}</p>
+
+  <div class="modal-wraper hide">
+    <div class="modal">
+      <div class="inner" set:html={renderPost} />
+      <button class="modal-close text-2xl">+</button>
     </div>
-    <button class="toggle bg-black w-8 h-8 rounded-full text-white text-2xl">+</button>
   </div>
 </div>
 
-<style></style>
+<style>
+  .modal-wraper {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.337);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: animateWraper 0.2s ease-out;
+  }
 
-<script></script>
+  @keyframes animateWraper {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modal {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--colorPrimary);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5rem 2rem 2rem 2rem;
+    animation: animateModal 0.35s ease-out;
+    transform-origin: 0% 0%;
+  }
+
+  .modal .inner {
+    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  @keyframes animateModal {
+    from {
+      transform: scale(0.5) translate(-50%, -50%);
+    }
+    to {
+      transform: scale(1) translate(-50%, -50%);
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .modal button {
+    transform: rotate(45deg);
+    background: rgb(0, 0, 0);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .inner::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .inner::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  }
+
+  .inner::-webkit-scrollbar-thumb {
+    background-color: rgb(199, 180, 164);
+    border-radius: 100px;
+  }
+</style>
+
+<script>
+  const projects = document.querySelectorAll(".project");
+  const modals = document.querySelectorAll(".modal-wraper");
+  const closeBtns = document.querySelectorAll(".modal-close");
+
+  projects.forEach((project, i) => {
+    project.addEventListener("click", (e) => {
+      modals.forEach((modal) => {
+        modal.classList.add("hide");
+      });
+      modals[i].classList.remove("hide");
+      closeBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          modals[i].classList.add("hide");
+        });
+      });
+    });
+  });
+</script>

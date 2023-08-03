@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Jazmin"]
+        jazmin: ["Jazmin"]
+      },
+      colors: {
+        primary: "#fcfcf4",
+        shade: "#efefe6"
       }
     }
   },

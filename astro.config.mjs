@@ -16,11 +16,11 @@ export default defineConfig({
         experience: "storyblok/Experience",
         singleExperience: "storyblok/SingleExperience",
         project: "storyblok/Project",
-        singleProject: "storyblok/SingleProject"
+        singleProject: "storyblok/SingleProject",
       }
     }),
     tailwind({
-      applyBaseStyles: true
+      applyBaseStyles: false
     })
   ],
   vite: {

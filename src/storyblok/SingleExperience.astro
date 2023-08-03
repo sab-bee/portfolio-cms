@@ -5,14 +5,14 @@ const { blok, counter } = Astro.props;
 const renderTask = renderRichText(blok.tasks);
 ---
 
-<div {...storyblokEditable(blok)} class="border-b border-black">
+<div {...storyblokEditable(blok)} class="border-b border-black last:border-none">
   <div
-    class="tab select-none py-9 flex gap-x-8 justify-between items-center cursor-pointer hover:bg-neutral-100 px-8"
+    class="tab select-none py-9 flex gap-x-8 justify-between items-center cursor-pointer hover:bg-shade transition-colors px-8"
   >
     <div>
-      <h2 class="text-2xl">{blok.organization}</h2>
-      <h3 class="text-lg">{blok.title}</h3>
-      <p>{blok.duration}</p>
+      <h2 class="text-2xl m-0 font-normal">{blok.organization}</h2>
+      <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
+      <p class="m-0">{blok.duration}</p>
     </div>
     <button class="toggle bg-black w-8 h-8 rounded-full text-white text-2xl">+</button>
   </div>

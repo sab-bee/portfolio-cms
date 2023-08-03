@@ -20,6 +20,7 @@
     "vite": "^4.3.5"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.19"
+    "@studio-freight/lenis": "^1.0.19",
+    "locomotive-scroll": "^4.1.4"
   }
 }
