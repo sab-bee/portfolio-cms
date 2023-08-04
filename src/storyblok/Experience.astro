@@ -6,22 +6,22 @@ const { blok } = Astro.props;
 ---
 
 <section {...storyblokEditable(blok)} class="">
-  <div class="flex border-b border-black justify-between items-center w-[96%] mx-auto">
+  <div class="lg:flex border-b border-black justify-between items-center w-[96%] mx-auto">
     <h2 class="font-normal text-[4vw] m-0">EXPERIENCE</h2>
-    <p class="border border-black py-1 px-2 rounded-full m-0">
-      my work experiences and achievements
+    <p class="lg:border border-black py-1 lg:px-2 rounded-full m-0">
+      {blok.headline}
     </p>
   </div>
-  <div class="flex items-center">
-    <div class="w-3/5 border-r border-black pr-6">
+  <div class="flex flex-col lg:flex-row items-center">
+    <div class="w-full lg:w-3/5 border-r border-black pr-6">
       {
         blok.container?.map((blok, i) => {
           return <StoryblokComponent blok={blok} counter={i} />;
         })
       }
     </div>
-    <div class="w-2/5">
-      <img src="../../assets/images/experience.png" alt="" />
+    <div>
+      <img class="md:h-[500px] object-cover" src="../../assets/images/experience.png" alt="" />
     </div>
   </div>
 </section>

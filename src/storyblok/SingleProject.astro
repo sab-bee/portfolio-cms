@@ -111,6 +111,12 @@ const renderPost = renderRichText(blok.post);
   .borderBot {
     border-bottom: 1px solid black;
   }
+
+  @media only screen and (max-width: 768px) {
+    .modal {
+      width: 90%;
+    }
+  }
 </style>
 
 <script>
@@ -137,7 +143,7 @@ const renderPost = renderRichText(blok.post);
     projects[i].classList.add("borderX");
   }
 
-  for (let i = 0; i <= projects.length-3; i++) {
+  for (let i = 0; i <= projects.length - 3; i++) {
     projects[i].classList.add("borderBot");
   }
 </script>

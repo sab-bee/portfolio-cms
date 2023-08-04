@@ -6,12 +6,12 @@ const { blok } = Astro.props;
 ---
 
 <section {...storyblokEditable(blok)} class="border-t border-black w-[96%] mx-auto">
-  <div class="flex border-b border-black justify-between items-center">
+  <div class="lg:flex border-b border-black justify-between items-center">
     <h2 class="text-[4vw] font-normal m-0">PROJECT</h2>
-    <p class="border border-black py-1 px-2 rounded-full">projects that helped me develop</p>
+    <p class="lg:border border-black py-1 lg:px-2 rounded-full m-0">{blok.headline}</p>
   </div>
 
-  <div class="grid grid-cols-3">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3">
     {
       blok.container?.map((blok, i) => {
         return <StoryblokComponent blok={blok} counter={i} />;

@@ -7,11 +7,11 @@ const renderAbout = renderRichText(blok.about);
 
 <section
   {...storyblokEditable(blok)}
-  class="border-b border-black py-8 flex justify-between items-center w-[96%] mx-auto"
+  class="border-b border-black py-8 flex flex-col md:flex-row justify-between items-center w-[96%] mx-auto"
 >
-  <div class="space-y-4 w-[60%]">
-    <h3 class="text-5xl font-medium m-0">{blok.headline}</h3>
-    <h2 class="text-5xl font-medium m-0">{blok.name}</h2>
+  <div class="space-y-4 w-full md:w-[60%]">
+    <h3 class="text-[3vw] font-medium m-0">{blok.headline}</h3>
+    <h2 class="text-[3vw] font-medium m-0">{blok.name}</h2>
     <p class="m-0">{blok.title}</p>
     <div set:html={renderAbout} class="about" />
     <a class="ctaprimary mt-2" href={blok.resume.url} target={blok.resume.target}
@@ -19,8 +19,8 @@ const renderAbout = renderRichText(blok.about);
     >
   </div>
 
-  <div class="w-[40%]">
-    <img src="../../assets/images/dp.png" alt="" />
+  <div class="">
+    <img class="md:h-[400px] object-cover" src="../../assets/images/dp.png" alt="" />
   </div>
 </section>
 
