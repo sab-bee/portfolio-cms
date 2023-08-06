@@ -1,8 +1,8 @@
 ---
 import { renderRichText, storyblokEditable } from "@storyblok/astro";
-import ReviewCard from "../components/ReviewCard.astro";
+import ReviewCard from "../components/ReviewCard.svelte";
 
 const { blok } = Astro.props;
 ---
 
-<ReviewCard {...storyblokEditable(blok)} blok={blok} />
+<ReviewCard {...storyblokEditable(blok)} blok={blok} client:load />
