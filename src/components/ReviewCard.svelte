@@ -52,11 +52,11 @@
   }
 
   @media only screen and (max-width: 768px) {
-    .card:not(:first-child) {
-      margin-top: calc(-10%);
+    .shuffle {
+      margin-top: -20%
     }
     .arrange {
-      transform: translateY(20%);
+      transform: translateY(40%);
     }
   }
 </style>

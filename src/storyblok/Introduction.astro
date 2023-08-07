@@ -7,9 +7,9 @@ const renderAbout = renderRichText(blok.about);
 
 <section
   {...storyblokEditable(blok)}
-  class="border-b border-black py-8 flex flex-col md:flex-row justify-between items-center w-[96%] mx-auto"
+  class="border-b border-black py-8 flex flex-col lg:flex-row justify-between items-center w-[96%] mx-auto"
 >
-  <div class="space-y-4 w-full md:w-[60%]">
+  <div class="space-y-4 w-full lg:w-[60%]">
     <h3 class="text-[3vw] font-medium m-0">{blok.headline}</h3>
     <h2 class="text-[3vw] font-medium m-0">{blok.name}</h2>
     <p class="m-0">{blok.title}</p>
@@ -20,7 +20,7 @@ const renderAbout = renderRichText(blok.about);
   </div>
 
   <div class="">
-    <img class="md:h-[400px] object-cover" src="images/dp.png" alt="" />
+    <img class="md:h-[500px] object-cover" src="images/dp.png" alt="" />
   </div>
 </section>
 
