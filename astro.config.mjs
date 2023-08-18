@@ -15,7 +15,7 @@ export default defineConfig({
         introduction: "storyblok/Introduction",
         about: "storyblok/About",
         experience: "storyblok/Experience",
-        singleExperience: "storyblok/SingleExperience",
+        workExperience: "storyblok/SingleExperience",
         project: "storyblok/Project",
         singleProject: "storyblok/SingleProject",
         testimonial: "storyblok/Review",
