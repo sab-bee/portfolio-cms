@@ -34,9 +34,12 @@
     src={blok?.banner?.filename}
     alt=""
   /> -->
-  <div>
-    <h2 class="text-xl font-medium m-0">{blok.name}</h2>
-    <p class="m-0 mt-2">{blok.details}</p>
+  <div >
+    <div class="grid grid-cols-4">
+      <h2 class="col-span-3 text-xl font-medium m-0">{blok.name}</h2>
+      <button class="col-span-1 justify-self-end text-2xl font-medium w-10 h-10 border border-black rounded-full">↗</button>
+    </div>
+    <p class="m-0 mt-2 ">{blok.details}</p>
   </div>
 
   <div class="modal-wraper hide">
@@ -88,6 +91,7 @@
     width: 100%;
     height: 80vh;
     overflow-y: auto;
+    padding: 0 .5rem;
     overscroll-behavior: contain;
   }
 
@@ -117,7 +121,7 @@
   }
 
   .inner::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
 
   .inner::-webkit-scrollbar-thumb {
@@ -127,7 +131,24 @@
 
   @media only screen and (max-width: 768px) {
     .modal {
-      width: 90%;
+      width: 95%;
+      padding: 4rem 1rem 1rem 1rem;
+      transform: translate(-50%, -60%);
+    }
+    .modal .inner {
+      width: 100%;
+      height: 70vh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    @keyframes animateModal {
+      from {
+        transform: scale(0.5) translate(-50%, -60%);
+      }
+      to {
+        transform: scale(1) translate(-50%, -60%);
+      }
     }
   }
 </style>

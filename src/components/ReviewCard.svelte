@@ -53,10 +53,10 @@
 
   @media only screen and (max-width: 768px) {
     .shuffle {
-      margin-top: -20%
+      margin-top: -8rem
     }
     .arrange {
-      transform: translateY(40%);
+      transform: translateY(8rem);
     }
   }
 </style>
