@@ -9,11 +9,11 @@ const renderAbout = renderRichText(blok.about);
   {...storyblokEditable(blok)}
   class="border-b border-black py-8 flex flex-col lg:flex-row justify-between items-center w-[96%] mx-auto"
 >
-  <div class="space-y-4 w-full lg:w-[60%]">
-    <h3 class="lg:text-[3vw] text-3xl font-medium m-0 mb-2">{blok.headline} {blok.name}</h3>
-    <p class="lg:text-[2vw] text-2xl">{blok.title}</p>
+  <div class="w-full lg:w-[60%]">
+    <h3 class="lg:text-[3vw] text-3xl font-medium m-0">{blok.name}</h3>
+    <p class="lg:text-[2vw] text-2xl m-0 lg:mt-6 mt-3">{blok.title}</p>
     <div set:html={renderAbout} class="about" />
-    <a class="ctaprimary mt-2" href={blok.resume.url} target={blok.resume.target}
+    <a class="ctaprimary m-0" href={blok.resume.url} target={blok.resume.target}
       >checkout my resume</a
     >
   </div>
