@@ -3,6 +3,7 @@ import storyblok from "@storyblok/astro";
 import { loadEnv } from "vite";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
+import basicSsl from "@vitejs/plugin-basic-ssl";
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 export default defineConfig({
@@ -26,5 +27,11 @@ export default defineConfig({
       applyBaseStyles: false
     }),
     svelte()
-  ]
+  ],
+  vite: {
+    plugins: [basicSsl()],
+    server: {
+      https: true
+    }
+  }
 });
