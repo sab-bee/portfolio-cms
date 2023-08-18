@@ -37,14 +37,14 @@
 
 <div class="border-b border-black last:border-none " class:shadow={css}>
   <div
-    class="tab select-none py-9 flex gap-x-8 justify-between items-center cursor-pointer hover:bg-shade transition-colors px-8"
+    class="tab select-none py-9 grid grid-cols-4 items-center cursor-pointer hover:bg-shade transition-colors px-8"
   >
-    <div>
+    <div class="col-span-3">
       <h2 class="text-2xl m-0 font-normal">{blok.organization}</h2>
       <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
       <p class="m-0">{blok.duration}</p>
     </div>
-    <button class:rotate={css} class="toggle bg-black w-8 h-8 rounded-full text-white text-2xl">+</button>
+    <button class:rotate={css} class="toggle justify-self-end bg-black w-8 h-8 rounded-full text-white text-2xl col-span-1">+</button>
   </div>
   <div class="desc mt-2 collapse mb-8 px-8">
     {@html renderTask}
