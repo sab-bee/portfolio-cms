@@ -27,7 +27,7 @@
 
 </script>
 
-<div bind:this={main} class:arrange={isArrange} class:shuffle={isArrange} class="card">
+<div bind:this={main} class:arrange={isArrange} class:shuffle={isArrange} class="card select-none">
   <div
     class="bg-primary border-2 border-dashed border-black p-8 pr-14 rounded-2xl cursor-pointer hover:bg-shade transition-colors w-[100%] md:w-[450px]"
   >

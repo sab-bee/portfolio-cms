@@ -44,7 +44,7 @@
 
   <div class="modal-wraper hide">
     <div class="modal">
-      <div class="inner">
+      <div class="inner select-text cursor-text">
         <img class="lg:h-[200px] h-[150px] w-full object-cover" src={blok.banner.filename} alt="project banner">
         {@html renderPost}
       </div>

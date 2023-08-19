@@ -107,3 +107,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(199, 180, 164);
   border-radius: 100px;
 }
+
+::selection {
+  background: rgb(235, 224, 215);
+}
