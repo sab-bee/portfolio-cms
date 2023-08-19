@@ -4,8 +4,8 @@
 
 :root {
   --cursorSize: 40px;
-  --colorPrimary: #fcfcf4;
-  --colorShade: #dcd9b1;
+  --colorPrimary: #ffffff;
+  --colorShade: #ededed;
 }
 
 *,
@@ -27,7 +27,7 @@ body {
   font-size: 17px;
   margin: 0;
   line-height: 1.375;
-  background: #f0f0e5;
+  background: #efefef;
 }
 
 button,

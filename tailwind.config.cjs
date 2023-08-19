@@ -7,8 +7,8 @@ module.exports = {
         jazmin: ["Jazmin"]
       },
       colors: {
-        primary: "#fcfcf4",
-        shade: "#efefdd",
+        primary: "#ffffff",
+        shade: "#ededed",
         dark: "#241F21"
       }
     }

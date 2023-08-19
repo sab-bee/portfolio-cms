@@ -4,7 +4,7 @@ import { storyblokEditable } from "@storyblok/astro";
 const { blok } = Astro.props;
 ---
 
-<section {...storyblokEditable(blok)} class="w-[96%] mx-auto border-t border-black">
+<section {...storyblokEditable(blok)} class="w-[96%] mx-auto border-black">
   <div class="lg:flex border-b border-black justify-between items-center">
     <h2 class="lg:text-[4vw] font-medium lg:font-normal m-0">CONTACT</h2>
     <p class="lg:border border-black py-1 lg:px-2 rounded-full m-0">{blok.headline}</p>
