@@ -40,10 +40,14 @@
 
 <div>
   <div
-    class="tab select-none py-9 grid grid-cols-4 items-center cursor-pointer hover:bg-shade transition-colors px-8"
+    class="tab select-none py-9 grid grid-cols-4 items-center hover:bg-shade transition-colors px-8"
   >
     <div class="col-span-3">
-      <h2 class="text-2xl m-0 font-normal">{blok.organization}</h2>
+      <a class="block w-fit" href={blok.website} target="_blank">
+        <h2 class="text-2xl m-0 font-normal border-b border-black inline-block">{blok.organization}
+        </h2>
+        <span class="text-xl inline-block">↗</span>
+      </a>
       <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
       <p class="m-0">{blok.duration}</p>
     </div>
