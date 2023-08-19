@@ -37,7 +37,7 @@
   <div >
     <div class="grid grid-cols-4">
       <h2 class="col-span-3 text-xl font-medium m-0">{blok.name}</h2>
-      <button class="col-span-1 justify-self-end text-2xl font-medium w-10 h-10 border border-black rounded-full">↗</button>
+      <button class="col-span-1 justify-self-end text-2xl w-8 h-8 border border-black rounded-full">i</button>
     </div>
     <p class="m-0 mt-2 ">{blok.details}</p>
   </div>
