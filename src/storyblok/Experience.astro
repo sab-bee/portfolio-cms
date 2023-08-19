@@ -13,7 +13,7 @@ const { blok } = Astro.props;
     </p>
   </div>
   <div class="flex flex-col lg:flex-row items-center lg:items-start">
-    <div class="w-full lg:w-3/5 lg:border-r border-black pr-6">
+    <div class="w-full lg:w-3/5 pr-6">
       {
         blok.container?.map((blok, i) => {
           return <StoryblokComponent blok={blok} counter={i} />;
