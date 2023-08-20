@@ -10,7 +10,7 @@ const { blok } = Astro.props;
   </div>
   <div class="my-8 flex flex-col lg:flex-row items-center">
     <div>
-      <img class="md:h-[500px] object-cover" src="images/about.png" alt="" />
+      <img class="md:h-[500px] object-cover" src={blok.banner} alt="" />
     </div>
     <div class="w-full lg:w-3/5 space-y-3">
       <p>{blok.para1}</p>

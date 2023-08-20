@@ -16,19 +16,19 @@
     tabs.forEach((tab, i) => {
       tab.addEventListener("click", () => {
         descs.forEach((desc) => {
-          desc.classList.add("collapse");
+          desc.classList.add("hide");
         });
         toggles.forEach((toggle) => {
           toggle.classList.remove("rotate");
           toggle.classList.add("rotateBack");
         });
         if (reference !== i) {
-          descs[i].classList.remove("collapse");
+          descs[i].classList.remove("hide");
           reference = i;
           toggles[i].classList.add("rotate");
           toggles[i].classList.remove("rotateBack");
         } else {
-          descs[i].classList.add("collapse");
+          descs[i].classList.add("hide");
           reference = -1;
           toggles[i].classList.remove("rotate");
           toggles[i].classList.add("rotateBack");
@@ -38,7 +38,7 @@
     })
 </script>
 
-<div>
+<div class:expand={css} class="border-2 box border-dashed border-black rounded-2xl overflow-hidden mt-2">
   <div
     class="tab select-none py-9 grid grid-cols-4 items-center hover:bg-shade transition-colors px-8"
   >
@@ -53,27 +53,14 @@
     </div>
     <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-black text-3xl col-span-1 text-neutral-700">+</button>
   </div>
-  <div class="desc mt-2 collapse mb-8 px-8">
+  <div class="desc mt-2 hide mb-8 px-8">
     {@html renderTask}
   </div>
 </div>
 
 <style>
-  .collapse {
+  .hide {
     display: none;
-  }
-
-  .desc {
-    animation: dropdown 0.2s;
-  }
-
-  @keyframes dropdown {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
   .rotate {

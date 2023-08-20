@@ -44,19 +44,33 @@
   }
   
   .shuffle {
-    margin-top: -42%;
+    margin-top: -8rem
   }
-
   .arrange {
-    transform: translateY(75%);
+    transform: translateY(8rem);
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .shuffle {
+      margin-top: 0;
+      margin-left: -35%;
+    }
+    
+    .arrange {
+      transform: translateY(0);
+      transform: translateX(70%);
+    }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 1536px) {
     .shuffle {
-      margin-top: -8rem
+      margin-top: 0;
+      margin-left: -26%;
     }
+    
     .arrange {
-      transform: translateY(8rem);
+      transform: translateY(0);
+      transform: translateX(70%);
     }
   }
 </style>
