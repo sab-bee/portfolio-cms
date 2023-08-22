@@ -5,12 +5,23 @@ const { blok } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)} class="w-full">
-  <!-- {
-    blok.link.linktype === 'email' ? <a class="hover:bg-black hover:text-white text-center mt-2 block py-4 px-6 border border-colBorder transition-colors lg:border-x-0"
-    href=`mailto:${blok.link.url}`
-    target={blok.link.target}>{blok.title}</a> : <a
-    class="hover:bg-shade text-center mt-2 block  py-4 px-6 border border-colBorder transition-colors"
-    href=`${blok.link.url}`
-    target={blok.link.target}>{blok.title}</a>
-  } -->
+  {
+    blok.link.linktype === "email" ? (
+      <a
+        class="hover:bg-black hover:text-white text-center mt-2 block py-4 px-6 border border-colBorder transition-colors lg:border-x-0"
+        href={`mailto:${blok.link.url}`}
+        target={blok.link.target}
+      >
+        {blok.title}
+      </a>
+    ) : (
+      <a
+        class="hover:bg-shade text-center mt-2 block  py-4 px-6 border border-colBorder transition-colors"
+        href={blok.link.url}
+        target={blok.link.target}
+      >
+        {blok.title}
+      </a>
+    )
+  }
 </div>
