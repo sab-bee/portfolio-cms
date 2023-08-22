@@ -34,7 +34,7 @@
     })
 </script>
 
-<div class:expand={css} class="border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2">
+<div class:expand={css} class="border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2 bg-shade">
   <div
     class="tab select-none py-9 grid grid-cols-4 items-center transition-colors px-8"
   >
@@ -47,7 +47,7 @@
       <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
       <p class="m-0">{blok.duration}</p>
     </div>
-    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-colBorder text-3xl col-span-1 text-secondary">+</button>
+    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-colBorder text-3xl col-span-1 text-primary">+</button>
   </div>
   <div class="desc mt-2 mb-8 px-8" class:hide={false}>
     {@html renderTask}
@@ -72,13 +72,13 @@
       transform: rotate(0);
     }
     to {
-      transform: rotate(45deg);
+      transform: rotate(135deg);
     }
   }
 
   @keyframes rotationBack {
     from {
-      transform: rotate(45deg);
+      transform: rotate(135deg);
     }
     to {
       transform: rotate(0);

@@ -27,12 +27,12 @@
   })
 </script>
 
-<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none"
+<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none bg-shade"
 >
   <div >
     <div class="grid grid-cols-4">
       <h2 class="col-span-3 text-xl font-medium m-0">{blok.name}</h2>
-      <button class="col-span-1 justify-self-end text-2xl w-8 h-8 border border-colBorder rounded-full">i</button>
+      <button class="col-span-1 justify-self-end text-lg w-8 h-8 border border-colBorder text-primary rounded-full">i</button>
     </div>
     <p class="m-0 mt-2 ">{blok.details}</p>
   </div>
@@ -43,7 +43,7 @@
         <img class="lg:h-[200px] h-[150px] w-full object-cover" src={blok.banner.filename} alt="project banner">
         {@html renderPost}
       </div>
-      <button class="modal-close text-2xl">+</button>
+      <button class="modal-close text-2xl text-primary border border-primary">+</button>
     </div>
   </div>
 </div>
@@ -106,8 +106,6 @@
 
   .modal button {
     transform: rotate(45deg);
-    background: rgb(0, 0, 0);
-    color: white;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -121,7 +119,7 @@
   }
 
   .inner::-webkit-scrollbar-thumb {
-    background-color: rgb(199, 180, 164);
+    background-color: #98E5E1;
     border-radius: 100px;
   }
 

@@ -29,11 +29,11 @@
 
 <div bind:this={main} class:arrange={isArrange} class:shuffle={isArrange} class="card select-none">
   <div
-    class="bg-primary border-2 border-dashed border-colBorder p-8 pr-14 rounded-2xl cursor-pointer transition-colors w-[100%] md:w-[450px]"
+    class="bg-shade border-2 border-dashed border-colBorder p-8 pr-14 rounded-2xl cursor-pointer transition-colors w-[100%] md:w-[450px]"
   >
     <p class="italic m-0 font-normal text-base">{blok.testimoni}</p>
-    <h2 class="m-0 text-lg mt-2 font-medium">{blok.reviewer}</h2>
-    <h2 class="m-0 font-medium text-neutral-500 text-base">{blok.title}</h2>
+    <h2 class="m-0 text-lg mt-2 font-medium text-primary">{blok.reviewer}</h2>
+    <h2 class="m-0 font-medium text-base text-second">{blok.title}</h2>
   </div>
 </div>
 

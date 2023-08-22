@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 /* CUSTOM TAILWIND PREFLIGHT */
 
 :root {
   --cursorSize: 40px;
-  --colorBg: #ffffff;
-  --colorShade: #ededed;
+  --test: #15152c;
+  --colorBg: #111121;
 }
 
 *,
@@ -22,13 +22,13 @@ html {
 }
 
 body {
-  font-family: Poppins;
+  font-family: "Poppins";
   overscroll-behavior: none;
   font-size: 17px;
-  color: rgb(0, 0, 0);
+  color: rgb(212, 212, 212);
   margin: 0;
   line-height: 1.375;
-  background: rgb(243, 243, 243);
+  background: #090918;
 }
 
 button,
