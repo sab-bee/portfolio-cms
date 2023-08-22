@@ -127,21 +127,21 @@
     .modal {
       width: 95%;
       padding: 4rem 1rem 1rem 1rem;
-      transform: translate(-50%, -60%);
+      transform: translate(-50%, -50%);
     }
     .modal .inner {
       width: 100%;
-      height: 70vh;
+      height: 75vh;
       overflow-y: auto;
       overscroll-behavior: contain;
     }
 
     @keyframes animateModal {
       from {
-        transform: scale(0.5) translate(-50%, -60%);
+        transform: scale(0.5) translate(-50%, -50%);
       }
       to {
-        transform: scale(1) translate(-50%, -60%);
+        transform: scale(1) translate(-50%, -50%);
       }
     }
   }
