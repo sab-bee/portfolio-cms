@@ -8,30 +8,34 @@ import netlify from "@astrojs/netlify/functions";
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 export default defineConfig({
-  integrations: [storyblok({
-    accessToken: env.STORYBLOK_TOKEN,
-    bridge: true,
-    components: {
-      page: "storyblok/Page",
-      introduction: "storyblok/Introduction",
-      about: "storyblok/About",
-      experience: "storyblok/Experience",
-      workExperience: "storyblok/SingleExperience",
-      project: "storyblok/Project",
-      singleProject: "storyblok/SingleProject",
-      testimonial: "storyblok/Review",
-      review: "storyblok/SingleReview",
-      contact: "storyblok/Contact"
-    }
-  }), tailwind({
-    applyBaseStyles: false
-  }), svelte()],
+  output: "server",
+  adapter: netlify(),
+  integrations: [
+    storyblok({
+      accessToken: env.STORYBLOK_TOKEN,
+      bridge: true,
+      components: {
+        page: "storyblok/Page",
+        introduction: "storyblok/Introduction",
+        about: "storyblok/About",
+        experience: "storyblok/Experience",
+        workExperience: "storyblok/SingleExperience",
+        project: "storyblok/Project",
+        singleProject: "storyblok/SingleProject",
+        testimonial: "storyblok/Review",
+        review: "storyblok/SingleReview",
+        contact: "storyblok/Contact"
+      }
+    }),
+    tailwind({
+      applyBaseStyles: false
+    }),
+    svelte()
+  ],
   vite: {
     plugins: [basicSsl()],
     server: {
       https: true
     }
-  },
-  output: "server",
-  adapter: netlify()
+  }
 });
