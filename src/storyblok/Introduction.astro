@@ -13,8 +13,10 @@ const renderAbout = renderRichText(blok.about);
     <h3 class="lg:text-[3vw] text-3xl font-medium m-0 text-primary">{blok.name}</h3>
     <p class="lg:text-[2vw] text-2xl m-0 lg:mt-6 mt-3 text-second">{blok.title}</p>
     <div set:html={renderAbout} class="about" />
-    <a class="ctaprimary m-0 text-primary" href={blok.resume.url} target={blok.resume.target}
-      >checkout my resume <span class="text-xl">↗</span></a
+    <a
+      class="ctaprimary m-0 text-primary hover:bg-shade"
+      href={blok.resume.url}
+      target={blok.resume.target}>checkout my resume <span class="text-xl">↗</span></a
     >
   </div>
 
