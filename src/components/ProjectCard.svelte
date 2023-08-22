@@ -119,7 +119,7 @@
   }
 
   .inner::-webkit-scrollbar-thumb {
-    background-color: #98E5E1;
+    background-color: #afafaf;
     border-radius: 100px;
   }
 
