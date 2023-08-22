@@ -4,8 +4,7 @@
 
 :root {
   --cursorSize: 40px;
-  --colorPrimary: #29292b;
-  --colorPrimary: #1f132e;
+  --colorBg: #ffffff;
   --colorShade: #ededed;
 }
 
@@ -26,10 +25,10 @@ body {
   font-family: Poppins;
   overscroll-behavior: none;
   font-size: 17px;
-  color: rgb(177, 179, 187);
+  color: rgb(0, 0, 0);
   margin: 0;
   line-height: 1.375;
-  background: black;
+  background: rgb(243, 243, 243);
 }
 
 button,

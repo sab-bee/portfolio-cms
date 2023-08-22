@@ -34,12 +34,12 @@
     })
 </script>
 
-<div class:expand={css} class="border-2 box border-dashed border-third rounded-2xl overflow-hidden mt-2">
+<div class:expand={css} class="border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2">
   <div
-    class="tab select-none py-9 grid grid-cols-4 items-center hover:bg-shade transition-colors px-8"
+    class="tab select-none py-9 grid grid-cols-4 items-center transition-colors px-8"
   >
     <div class="col-span-3">
-      <a class="block w-fit relative border-b border-third" href={blok.website} target="_blank">
+      <a class="block w-fit relative border-b border-colBorder" href={blok.website} target="_blank">
         <h2 class="text-2xl m-0 font-normal">{blok.organization}
         </h2>
         <span class="absolute text-xl bottom-0 -right-5 ">↗</span>
@@ -47,7 +47,7 @@
       <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
       <p class="m-0">{blok.duration}</p>
     </div>
-    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-secondary text-3xl col-span-1  text-secondary">+</button>
+    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-colBorder text-3xl col-span-1 text-secondary">+</button>
   </div>
   <div class="desc mt-2 mb-8 px-8" class:hide={false}>
     {@html renderTask}

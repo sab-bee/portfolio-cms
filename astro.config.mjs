@@ -7,7 +7,6 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 import netlify from "@astrojs/netlify/functions";
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [storyblok({
     accessToken: env.STORYBLOK_TOKEN,

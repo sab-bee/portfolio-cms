@@ -7,11 +7,10 @@ module.exports = {
         jazmin: ["Jazmin"]
       },
       colors: {
-        primary: "#ffffff",
+        primary: "#D3FE9E",
+        second: "#8CC7D0",
         shade: "#29292b",
-        dark: "#241F21",
-        secondary: "#D3FE9E",
-        third: "#8CC7D0"
+        colBorder: "black"
       }
     }
   },

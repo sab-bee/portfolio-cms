@@ -10,7 +10,7 @@ const { title = "Portfolio", description = "Sadia Afrin's portfolio" } = Astro.p
   <div id="wrapper" class="hidden md:block">
     <div id="cursor"></div>
   </div>
-  <main id="main" class="border-2 border-third m-3 md:w-[75%] w-[95%] mx-auto">
+  <main id="main" class="border-2 border-colBorder m-3 md:w-[75%] w-[95%] mx-auto">
     <slot />
   </main>
 </body>
@@ -32,7 +32,7 @@ const { title = "Portfolio", description = "Sadia Afrin's portfolio" } = Astro.p
   }
 
   #main {
-    background: var(--colorPrimary);
+    background: var(--colorBg);
   }
 </style>
 

@@ -27,17 +27,12 @@
   })
 </script>
 
-<div class="project grid justify-center  cursor-pointer hover:bg-shade p-6 transition-colors select-none"
+<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none"
 >
-  <!-- <img
-    class="h-[200px] w-[300px] object-cover rounded-xl mx-auto"
-    src={blok?.banner?.filename}
-    alt=""
-  /> -->
   <div >
     <div class="grid grid-cols-4">
       <h2 class="col-span-3 text-xl font-medium m-0">{blok.name}</h2>
-      <button class="col-span-1 justify-self-end text-2xl w-8 h-8 border border-third rounded-full">i</button>
+      <button class="col-span-1 justify-self-end text-2xl w-8 h-8 border border-colBorder rounded-full">i</button>
     </div>
     <p class="m-0 mt-2 ">{blok.details}</p>
   </div>
@@ -80,7 +75,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--colorPrimary);
+    background-color: var(--colorBg);
     border: 1px solid black;
     border-radius: 15px;
     padding: 5rem 2rem 2rem 2rem;
