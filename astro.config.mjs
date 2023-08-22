@@ -24,7 +24,8 @@ export default defineConfig({
         singleProject: "storyblok/SingleProject",
         testimonial: "storyblok/Review",
         review: "storyblok/SingleReview",
-        contact: "storyblok/Contact"
+        contact: "storyblok/Contact",
+        contactInfo: "storyblok/SingleContact"
       }
     }),
     tailwind({

@@ -1,8 +1,10 @@
 ---
 import { storyblokEditable } from "@storyblok/astro";
 import Headline from "../components/Headline.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const { blok } = Astro.props;
+const year = new Date().getFullYear();
 ---
 
 <section {...storyblokEditable(blok)} class="w-[96%] mx-auto border-colBorder">
@@ -10,21 +12,12 @@ const { blok } = Astro.props;
     <Headline class="lg:text-[4vw] font-medium lg:font-normal m-0">CONTACT</Headline>
     <p class="lg:border border-colBorder py-1 lg:px-2 rounded-full m-0">{blok.tagline}</p>
   </div>
-  <div class="flex flex-col lg:flex-row">
-    <a
-      class="hover:bg-shade text-center mt-2 block w-full py-4 px-6 border border-colBorder transition-colors"
-      href=`${blok.linkedin.url}`
-      target={blok.linkedin.target}>linkedin</a
-    >
-    <a
-      class="hover:bg-primary hover:text-shade text-center mt-2 block w-full py-4 px-6 border border-colBorder lg:border-x-0 transition-colors"
-      href=`mailto:${blok.email.url}`>say hello</a
-    >
-    <a
-      class="hover:bg-shade text-center mt-2 block w-full py-4 px-6 border border-colBorder transition-colors"
-      href=`${blok.facebook.url}`
-      target={blok.facebook.target}>facebook</a
-    >
+  <div class="flex flex-col lg:flex-row justify-center">
+    {
+      blok.container?.map((blok) => {
+        return <StoryblokComponent blok={blok} />;
+      })
+    }
   </div>
-  <p class="text-center my-8 text-sm">&copy; SadiaAfrinSweety. All Rights Reserved.</p>
+  <p class="text-center my-8 text-sm">{year} &copy; SadiaAfrinSweety. All Rights Reserved.</p>
 </section>
