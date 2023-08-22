@@ -1,16 +1,17 @@
 ---
 import { renderRichText, storyblokEditable } from "@storyblok/astro";
+import Headline from "../components/Headline.astro";
 const { blok } = Astro.props;
 ---
 
 <section {...storyblokEditable(blok)} class="w-[96%] mx-auto">
-  <div class="lg:flex border-b border-black justify-between items-center">
-    <h2 class="lg:text-[4vw] font-medium lg:font-normal m-0">ABOUT ME</h2>
-    <p class="lg:border border-black py-1 lg:px-2 rounded-full m-0">{blok.headline}</p>
+  <div class="lg:flex border-b border-third justify-between items-center">
+    <Headline>ABOUT ME</Headline>
+    <p class="lg:border border-third py-1 lg:px-2 rounded-full m-0">{blok.headline}</p>
   </div>
   <div class="my-8 flex flex-col lg:flex-row items-center">
     <div>
-      <img class="md:h-[500px] object-cover" src={blok.banner} alt="" />
+      <img class="md:h-[500px] object-cover" src={blok.banner.filename} alt="" />
     </div>
     <div class="w-full lg:w-3/5 space-y-3">
       <p>{blok.para1}</p>

@@ -11,25 +11,21 @@
     const descs = document.querySelectorAll(".desc");
     const toggles = document.querySelectorAll(".toggle");
 
-    let reference = -1;
-
+    descs.forEach((des) => {
+      des.classList.add('hide')
+    })
     tabs.forEach((tab, i) => {
+      let reference = -1;
       tab.addEventListener("click", () => {
-        descs.forEach((desc) => {
-          desc.classList.add("hide");
-        });
-        toggles.forEach((toggle) => {
-          toggle.classList.remove("rotate");
-          toggle.classList.add("rotateBack");
-        });
         if (reference !== i) {
           descs[i].classList.remove("hide");
           reference = i;
           toggles[i].classList.add("rotate");
           toggles[i].classList.remove("rotateBack");
-        } else {
+        }
+         else {
+          reference = -1
           descs[i].classList.add("hide");
-          reference = -1;
           toggles[i].classList.remove("rotate");
           toggles[i].classList.add("rotateBack");
         }
@@ -38,12 +34,12 @@
     })
 </script>
 
-<div class:expand={css} class="border-2 box border-dashed border-black rounded-2xl overflow-hidden mt-2">
+<div class:expand={css} class="border-2 box border-dashed border-third rounded-2xl overflow-hidden mt-2">
   <div
     class="tab select-none py-9 grid grid-cols-4 items-center hover:bg-shade transition-colors px-8"
   >
     <div class="col-span-3">
-      <a class="block w-fit relative border-b border-black" href={blok.website} target="_blank">
+      <a class="block w-fit relative border-b border-third" href={blok.website} target="_blank">
         <h2 class="text-2xl m-0 font-normal">{blok.organization}
         </h2>
         <span class="absolute text-xl bottom-0 -right-5 ">↗</span>
@@ -51,9 +47,9 @@
       <h3 class="text-lg m-0 font-normal">{blok.title}</h3>
       <p class="m-0">{blok.duration}</p>
     </div>
-    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-black text-3xl col-span-1 text-neutral-700">+</button>
+    <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-secondary text-3xl col-span-1  text-secondary">+</button>
   </div>
-  <div class="desc mt-2 hide mb-8 px-8">
+  <div class="desc mt-2 mb-8 px-8" class:hide={false}>
     {@html renderTask}
   </div>
 </div>
