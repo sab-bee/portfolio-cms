@@ -6,7 +6,7 @@ const { blok } = Astro.props;
 
 <section
   {...storyblokEditable(blok)}
-  class="py-8 flex flex-col lg:flex-row justify-between items-center w-[96%] mx-auto"
+  class="py-8 grid items-center  w-[96%] mx-auto min-h-[50vh]"
 >
   <div class="w-full lg:w-[60%]">
     <h3 class="lg:text-[3vw] text-3xl font-medium m-0 text-primary">{blok.name}</h3>
@@ -17,10 +17,6 @@ const { blok } = Astro.props;
       href={blok.resume.url}
       target={blok.resume.target}>checkout my resume <span class="text-xl">↗</span></a
     >
-  </div>
-
-  <div class="">
-    <img class="md:h-[300px] object-cover" src={blok.banner.filename} alt="" />
   </div>
 </section>
 
