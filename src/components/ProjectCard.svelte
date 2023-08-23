@@ -10,7 +10,6 @@
 
     projects.forEach((project, i) => {
       project.addEventListener("click", (e) => {
-        console.log("hello world");
         modals.forEach((modal) => {
           modal.classList.add("hide");
         });
