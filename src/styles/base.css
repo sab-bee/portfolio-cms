@@ -10,20 +10,3 @@
     @apply px-2 rounded-full bg-black text-white;
   }
 }
-
-@font-face {
-  font-family: "Jazmin";
-  src: url(/assets/fonts/jazmin/Jazmin-ExtraLight.otf) format("opentype");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Jazmin";
-  src: url(/assets/fonts/jazmin/Jazmin-Regular.otf) format("opentype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Jazmin";
-  src: url(/assets/fonts/jazmin/Jazmin-Medium.otf) format("opentype");
-  font-weight: 500;
-}
