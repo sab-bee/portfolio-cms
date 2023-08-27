@@ -34,9 +34,9 @@
     })
 </script>
 
-<div class:expand={css} class="bg-colBg border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2 hover:bg-shade p-8">
+<div class:expand={css} class="bg-colBg border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2 hover:bg-shade">
   <div
-    class="tab select-none grid grid-cols-4 items-center transition-colors"
+    class="tab select-none grid grid-cols-4 items-center transition-colors p-8"
   >
     <div class="col-span-3">
       <a class="block w-fit relative border-b border-colBorder" href={blok.website} target="_blank">
@@ -49,7 +49,7 @@
     </div>
     <button class:rotate={css} class:rotateBack={css} class="toggle justify-self-end  w-10 h-10 rounded-full border border-colBorder text-3xl col-span-1 text-primary">+</button>
   </div>
-  <div class="desc mt-2" class:hide={false}>
+  <div class="desc mt-2 px-4" class:hide={false}>
     {@html renderTask}
   </div>
 </div>

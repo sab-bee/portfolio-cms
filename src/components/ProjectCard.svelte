@@ -6,7 +6,7 @@
   onMount(() => {
     const projects = document.querySelectorAll(".project");
     const modals = document.querySelectorAll(".modal-wraper");
-    const closeBtns = document.querySelectorAll(".modal-close");
+    const closeBtnsAlt = document.querySelectorAll('.modal-close-opt')
 
     projects.forEach((project, i) => {
       project.addEventListener("click", (e) => {
@@ -14,7 +14,8 @@
           modal.classList.add("hide");
         });
         modals[i].classList.remove("hide");
-        closeBtns.forEach((btn) => {
+
+        closeBtnsAlt.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.stopPropagation();
             modals[i].classList.add("hide");
@@ -26,7 +27,7 @@
   })
 </script>
 
-<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none bg-colBg"
+<div class="project grid justify-center  cursor-pointer p-6 transition-colors select-none bg-colBg"
 >
   <div >
     <div class="grid grid-cols-4">
@@ -37,12 +38,12 @@
   </div>
 
   <div class="modal-wraper hide">
-    <div class="modal">
+    <div class="modal border border-colBorder">
       <div class="inner select-text cursor-text">
         <img class="lg:h-[200px] h-[150px] w-full object-cover" src={blok.banner.filename} alt="project banner">
         {@html renderPost}
       </div>
-      <button class="modal-close text-2xl text-primary border border-primary">+</button>
+      <button class="modal-close-opt text-primary bg-primary bg-opacity-40 px-8 py-2 mt-2 rounded w-full font-medium">close</button>
     </div>
   </div>
 </div>
@@ -75,9 +76,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--colorBg);
-    border: 1px solid black;
     border-radius: 15px;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 2rem;
     animation: animateModal 0.3s ease-out;
     transform-origin: 0% 0%;
   }
@@ -87,6 +87,7 @@
     height: 80vh;
     overflow-y: auto;
     padding: 0 .5rem;
+    margin-bottom: 1rem;
     overscroll-behavior: contain;
   }
 
@@ -103,16 +104,6 @@
     display: none;
   }
 
-  .modal button {
-    transform: rotate(45deg);
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
-
   .inner::-webkit-scrollbar {
     width: 5px;
   }
@@ -123,11 +114,13 @@
   }
 
   @media only screen and (max-width: 768px) {
+
     .modal {
       width: 95%;
       padding: 4rem 1rem 1rem 1rem;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -53%);
     }
+
     .modal .inner {
       width: 100%;
       height: 75vh;
@@ -137,10 +130,10 @@
 
     @keyframes animateModal {
       from {
-        transform: scale(0.5) translate(-50%, -50%);
+        transform: scale(0.5) translate(-50%, -53%);
       }
       to {
-        transform: scale(1) translate(-50%, -50%);
+        transform: scale(1) translate(-50%, -53%);
       }
     }
   }
