@@ -34,7 +34,7 @@
     })
 </script>
 
-<div class:expand={css} class="bg-white border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2 hover:bg-shade p-8">
+<div class:expand={css} class="bg-colBg border-2 box border-dashed border-colBorder rounded-2xl overflow-hidden mt-2 hover:bg-shade p-8">
   <div
     class="tab select-none grid grid-cols-4 items-center transition-colors"
   >
