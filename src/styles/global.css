@@ -110,5 +110,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::selection {
-  background: rgb(235, 224, 215);
+  background: #342d87;
 }

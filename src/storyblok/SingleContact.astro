@@ -8,7 +8,7 @@ const { blok } = Astro.props;
   {
     blok.link.linktype === "email" ? (
       <a
-        class="hover:bg-primary hover:bg-opacity-40 hover:text-primary hover:font-medium text-center mt-2 block py-4 px-6 border border-colBorder transition-colors lg:border-x-0"
+        class="hover:bg-primary hover:bg-opacity-40 text-primary font-medium text-center mt-2 block py-4 px-6 border border-colBorder transition-colors lg:border-x-0"
         href={`mailto:${blok.link.url}`}
         target={blok.link.target}
       >
@@ -16,7 +16,7 @@ const { blok } = Astro.props;
       </a>
     ) : (
       <a
-        class="hover:bg-shade text-center mt-2 block  py-4 px-6 border border-colBorder transition-colors"
+        class="hover:bg-shade text-center mt-2 block  py-4 px-6 border border-colBorder transition-colors text-primary font-medium"
         href={blok.link.url}
         target={blok.link.target}
       >
