@@ -26,7 +26,7 @@
   })
 </script>
 
-<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none bg-shade"
+<div class="project grid justify-center  cursor-pointer  p-6 transition-colors select-none bg-colBg"
 >
   <div >
     <div class="grid grid-cols-4">
@@ -118,7 +118,7 @@
   }
 
   .inner::-webkit-scrollbar-thumb {
-    background-color: #afafaf;
+    background-color: #5f5fa2;
     border-radius: 100px;
   }
 
